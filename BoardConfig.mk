@@ -26,10 +26,8 @@
 # Inherit from common
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
-# Recovery
-TARGET_OTA_ASSERT_DEVICE := waffle
-
 # TWRP specific build flags
+TW_MAX_BRIGHTNESS := 2048
 TW_FRAMERATE := 120
 
 # Vibrator

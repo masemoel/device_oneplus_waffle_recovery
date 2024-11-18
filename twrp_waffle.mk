@@ -35,7 +35,7 @@ PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstwor
 CUSTOM_VENDOR := $(lastword $(subst /, ,$(firstword $(subst _, ,$(firstword $(MAKEFILE_LIST))))))
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/$(CUSTOM_VENDOR)/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 # OEM Info (automatically taken from device tree path)
 BOARD_VENDOR := $(or $(word 2,$(subst /, ,$(firstword $(MAKEFILE_LIST)))),$(value 2))
@@ -55,10 +55,10 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
 # Common path for device trees
-COMMON_PATH := device/$(PRODUCT_BRAND)/$(COMMON_SOC)-common
+COMMON_PATH := device/oneplus/sm86xx-common
 
 # Device path for OEM device tree
-DEVICE_PATH := device/$(PRODUCT_BRAND)/$(PRODUCT_DEVICE)
+DEVICE_PATH := device/oneplus/waffle
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, $(DEVICE_PATH)/device-$(PRODUCT_DEVICE).mk)
+$(call inherit-product, $(DEVICE_PATH)/device-waffle.mk)
