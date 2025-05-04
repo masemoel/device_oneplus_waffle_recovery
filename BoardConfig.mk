@@ -27,6 +27,7 @@
 -include $(COMMON_PATH)/BoardConfigCommon.mk
 
 # TWRP specific build flags
+TW_NO_SCREEN_BLANK := true
 TW_MAX_BRIGHTNESS := 2048
 TW_FRAMERATE := 120
 
