@@ -1,7 +1,7 @@
 export TARGET_ARCH="arm64-v8a"
 
 # Some about us
-export FOX_VERSION="R11.1_1"
+export FOX_MAINTAINER_PATCH_VERSION=0
 export OF_MAINTAINER="masemoel"
 
 # Build environment stuffs
@@ -59,6 +59,7 @@ export FOX_REPLACE_TOOLBOX_GETPROP=1
 export OF_ENABLE_LPTOOLS=1
 export FOX_ASH_IS_BASH=1
 export FOX_DELETE_AROMAFM=1
+export OF_ENABLE_ALL_PARTITION_TOOLS=1
 export OF_NO_ADDITIONAL_MIUI_PROPS_CHECK=1
 export OF_QUICK_BACKUP_LIST="/boot;/dtbo;"
 export OF_ADVANCED_SECURITY=1
